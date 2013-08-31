@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>POST PAGE</h1>
+  
+  <p>Edit your Post</p>
+
+  <form action=<%="/post/#{@post.id}"%> method="POST">
+
+  <label for="title">Title</label>
+  <input id="title" type="text" name="post[title]" value=<%=@post.title%>><br><br>
+
+  <label for="body">Body</label>
+  <textarea rows="5" name="post[body]"><%=@post.body%></textarea><br><br>
+
+  <label for="tags">Tags</label>
+  <textarea rows="5" name="post[tags]"><%=@post.tags_s%></textarea><br><br>
+
+  <input type="submit" value="Commit Change" >
+
+  </form><br><br>
+
+  <form action=<%="/post/#{@post.id}"%> method="GET">
+  	<input type="submit" value="Omit Changes" >
+  </form>
+
+</div>
+
+
+
+
